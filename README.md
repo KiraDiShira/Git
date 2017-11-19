@@ -49,3 +49,5 @@ For unzip the object, remove the header and print out (-p) the actual content:
 git cat-file 23991897e13e47ed0adb91a0082c31c82fe0cbe5 -p
 Apple Pie
 ```
+### Git as a stupid content tracker
+
