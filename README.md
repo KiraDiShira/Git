@@ -67,3 +67,9 @@ To look the list of existing commit:
 git log
 ```
 <img src="https://github.com/KiraDiShira/Git/blob/master/Images/gitlog.png" />
+
+The commit is stored in the same way of a file, and If I print out his content:
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Images/commitobject.png" />
+
+I can see that is pointing to a tree object.
