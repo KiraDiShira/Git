@@ -35,3 +35,5 @@ And in .git/objects directory there are other three directory.
 I will talk later about *info* and *pack* directory, but note that *23* are the first two digits of the value of my item, while the remaining digits are the 23 directory's content:
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/Images/23content.png" />
+
+ciao
