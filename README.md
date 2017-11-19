@@ -95,3 +95,15 @@ At this time there are 8 objects in the database:
 git count-objects
 ```
 If I change only 1 row in a 10000 rows files will be created a new object in my database? This will not happen, and this is the reason we exist the *info* and *pack* directories. We can't focus on this optimization layer to understand the git objects model.
+
+TAG is like a label for the current state of the project. There are 2 type of tags: regular and annotated. Now we will see annotated tag.
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Images/tag.png />
+
+The git objects model is made up only of:
+- Blob
+- Commits
+- Trees
+- Annotated tags
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Images/gomfinal.png />
