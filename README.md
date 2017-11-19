@@ -51,3 +51,19 @@ Apple Pie
 ```
 ### Git as a stupid content tracker
 
+```
+git status
+```
+
+To commit a file I need to put it in the staging area first
+
+```
+git add
+git commit -m "First commit"
+```
+To look the list of existing commit:
+
+```
+git log
+```
+<img src="https://github.com/KiraDiShira/Git/blob/master/Images/gitlog.png" />
