@@ -87,4 +87,4 @@ Only the first commit has no parent, and each commit has a different tree value:
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/Images/secondcommittree.PNG" />
 
-<img src="https://github.com/KiraDiShira/Git/blob/master/Images/gom.PNG" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/Images/gom.png" />
