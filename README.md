@@ -98,7 +98,7 @@ If I change only 1 row in a 10000 rows files will be created a new object in my 
 
 TAG is like a label for the current state of the project. There are 2 type of tags: regular and annotated. Now we will see annotated tag.
 
-<img src="https://github.com/KiraDiShira/Git/blob/master/Images/tag.png />
+<img src="https://github.com/KiraDiShira/Git/blob/master/Images/tag.png" />
 
 The git objects model is made up only of:
 - Blob
@@ -106,4 +106,4 @@ The git objects model is made up only of:
 - Trees
 - Annotated tags
 
-<img src="https://github.com/KiraDiShira/Git/blob/master/Images/gomfinal.png />
+<img src="https://github.com/KiraDiShira/Git/blob/master/Images/gomfinal.png" />
