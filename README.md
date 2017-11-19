@@ -19,3 +19,12 @@ And then write (-w) on it:
 ```
  echo "Apple Pie" | git hash-object -w
 ```
+
+If I search on hiddens file of my root directory:
+
+```
+ ls -a
+```
+I will find an hidden *.git* folder:
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Images/githiddenfolder.png" />
