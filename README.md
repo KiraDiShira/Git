@@ -88,3 +88,10 @@ Only the first commit has no parent, and each commit has a different tree value:
 <img src="https://github.com/KiraDiShira/Git/blob/master/Images/secondcommittree.PNG" />
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/Images/gom.png" />
+
+At this time there are 8 objects in the database:
+
+```
+git count-objects
+```
+If I change only 1 row in a 10000 rows files will be created a new object in my database? This will not happen, and this is the reason we exist the *info* and *pack* directories. We can't focus on this optimization layer to understand the git objects model.
