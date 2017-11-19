@@ -78,3 +78,11 @@ The commit is stored in the same way of a file, and If I print out his content:
 I can see that is pointing to a tree object.
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/Images/objmod1.png" />
+
+If I do a second commit:
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Images/secondcommit.PNG" />
+
+Only the first commit has no parent, and each commit has a different tree value:
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Images/secondcommittree.PNG" />
