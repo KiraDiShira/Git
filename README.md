@@ -3,6 +3,7 @@
 ## Table of content
 
 - [Git as a persistent map](#git-as-a-persistent-map)   
+- [Git as a stupid content tracker](#git-as-a-stupid-content-tracker)
 
 ### Git as a persistent map
 
