@@ -35,4 +35,17 @@ And in .git/objects directory there are other three directory.
 I will talk later about *info* and *pack* directory, but note that *23* are the first two digits of the value of my item, while the remaining digits are the 23 directory's content:
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/Images/23new.PNG" />
-ciao
+
+If I want to know the type (-t) of my persisted object:
+
+```
+git cat-file 23991897e13e47ed0adb91a0082c31c82fe0cbe5 -t
+blob
+```
+
+For unzip the object, remove the header and print out (-p) the actual content:
+
+```
+git cat-file 23991897e13e47ed0adb91a0082c31c82fe0cbe5 -p
+Apple Pie
+```
