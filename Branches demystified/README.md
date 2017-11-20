@@ -71,9 +71,17 @@ Now we will see another type of merge:
 
 In this case, it's not created a merge committ because master branch is ahead and so all conflicts are already been resolved. This behaviour is called *fast forward*.
 
+It's possible that HEAD refers to a commit instead of a branch:
+
 <img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/dethead1.png" />
+
+If I do other commits, HEAD behaves like a branch:
+
 <img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/dethead2.png" />
 <img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/dethead3.png" />
+
+Garbage collector will delete unreachable objects.
+If I don't want that this happen:
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/gc.png" />
 
