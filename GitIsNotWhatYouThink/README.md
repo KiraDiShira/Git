@@ -1,3 +1,5 @@
+- [Index](https://github.com/KiraDiShira/Git#table-of-content)   
+
 # Git is not what you think
 
 - [Git as a persistent map](#git-as-a-persistent-map)   
