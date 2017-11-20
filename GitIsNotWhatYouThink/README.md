@@ -28,14 +28,14 @@ If I search on hiddens file of my root directory:
 ```
 I will find an hidden *.git* folder:
 
-<img src="https://github.com/KiraDiShira/Git/blob/master/Images/githiddenfolder.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/GitIsNotWhatYouThink/Images/githiddenfolder.png" />
 
 This directory is where maps are persisted. Actually I have persisted only one item: "Apple Pie" --> 23991897e13e47ed0adb91a0082c31c82fe0cbe5
 
 And in .git/objects directory there are other three directory.
 I will talk later about *info* and *pack* directory, but note that *23* are the first two digits of the value of my item, while the remaining digits are the 23 directory's content:
 
-<img src="https://github.com/KiraDiShira/Git/blob/master/Images/23new.PNG" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/GitIsNotWhatYouThink/Images/23new.PNG" />
 
 If I want to know the type (-t) of my persisted object:
 
@@ -67,25 +67,25 @@ To look the list of existing commit:
 ```
 git log
 ```
-<img src="https://github.com/KiraDiShira/Git/blob/master/Images/gitlog.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/GitIsNotWhatYouThink/Images/gitlog.png" />
 
 The commit is stored in the same way of a file, and If I print out his content:
 
-<img src="https://github.com/KiraDiShira/Git/blob/master/Images/commitobject.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/GitIsNotWhatYouThink/Images/commitobject.png" />
 
 I can see that is pointing to a tree object.
 
-<img src="https://github.com/KiraDiShira/Git/blob/master/Images/objmod1.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/GitIsNotWhatYouThink/Images/objmod1.png" />
 
 If I do a second commit:
 
-<img src="https://github.com/KiraDiShira/Git/blob/master/Images/secondcommit.PNG" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/GitIsNotWhatYouThink/Images/secondcommit.PNG" />
 
 Only the first commit has no parent, and each commit has a different tree value:
 
-<img src="https://github.com/KiraDiShira/Git/blob/master/Images/secondcommittree.PNG" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/GitIsNotWhatYouThink/Images/secondcommittree.PNG" />
 
-<img src="https://github.com/KiraDiShira/Git/blob/master/Images/gom.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/GitIsNotWhatYouThink/Images/gom.png" />
 
 At this time there are 8 objects in the database:
 
@@ -96,7 +96,7 @@ If I change only 1 row in a 10000 rows files will be created a new object in my 
 
 TAG is like a label for the current state of the project. There are 2 type of tags: regular and annotated. Now we will see annotated tag.
 
-<img src="https://github.com/KiraDiShira/Git/blob/master/Images/tag.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/GitIsNotWhatYouThink/Images/tag.png" />
 
 The git objects model is made up only of:
 - Blob
@@ -104,4 +104,4 @@ The git objects model is made up only of:
 - Trees
 - Annotated tags
 
-<img src="https://github.com/KiraDiShira/Git/blob/master/Images/gomfinal.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/GitIsNotWhatYouThink/Images/gomfinal.png" />
