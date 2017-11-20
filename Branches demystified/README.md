@@ -45,3 +45,10 @@ git checkout branchname
 Checkout = move head and update working area
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/checkout.png" />
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/merge1.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/merge2.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/merge3.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/merge4.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/merge5.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/merge6.png" />
