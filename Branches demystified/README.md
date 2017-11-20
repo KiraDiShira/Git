@@ -4,7 +4,7 @@
 
 - [Introduction to branches](#introduction-to-branches)   
 - [How merge works](#how-merge-works)
-- [Detached HEAD](#Detached-HEAD)
+- [Detached HEAD](#detached-head)
 
 
 ## Introduction to branches
