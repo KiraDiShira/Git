@@ -1,1 +1,2 @@
-10 mele
+8 mele
+1 patata
