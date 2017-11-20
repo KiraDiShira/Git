@@ -46,9 +46,23 @@ Checkout = move head and update working area
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/checkout.png" />
 
+If there is a new commit on Lisa branch:
+
 <img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/merge1.png" />
+
+We want to merge on master branch the commit on Lisa branch
+
 <img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/merge2.png" />
+
+If there is a conflict we need to resolve it with smartgit
+
 <img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/merge3.png" />
+
+and then put the resolved files in staging area, and finally made a merging commit
+
 <img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/merge4.png" />
+
+A merge is just a commit with one exception: it has 2 parents:
+
 <img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/merge5.png" />
 <img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/merge6.png" />
