@@ -70,3 +70,13 @@ Now we will see another type of merge:
 <img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/merge6.png" />
 
 In this case, it's not created a merge committ because master branch is ahead and so all conflicts are already been resolved. This behaviour is called *fast forward*.
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/dethead1.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/dethead2.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/dethead3.png" />
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/gc.png" />
+
+
+
+
