@@ -20,6 +20,20 @@ When we make a new commit, the current branch points to that.
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/pointer.png" />
 
+To create a new branch:
+```
+git branch branchname
+```
+To see the list of branches:
+```
+git branch
+```
+<img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/head.png" />
+
+What is the current branch? HEAD, is a reference to a branch
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/dobpoint.png" />
+
 
 
 
