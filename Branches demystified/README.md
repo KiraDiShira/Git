@@ -7,6 +7,30 @@
 
 ## Git as a persistent map
 
+When first commit is made, git creates "master" branch.
+Branches are stored in this folder:
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/branchesfolder.PNG" />
+
+*A branch is just a reference to a commit.*
+
+When we make a new commit, the current branch points to that.
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/Branch%20ob.png" />
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/pointer.png" />
+
+
+
+
+
+
+
+
+
+
+
+
 At his core git is a persistent map. Key: any sequence of bytes --> Values: SHA1 hash. For example: "Apple Pie" --> 23991897e13e47ed0adb91a0082c31c82fe0cbe5
 
 ```
