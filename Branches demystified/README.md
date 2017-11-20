@@ -58,11 +58,15 @@ If there is a conflict we need to resolve it with smartgit
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/merge3.png" />
 
-and then put the resolved files in staging area, and finally made a merging commit
+and then put the resolved files in staging area, and finally made a merging commit. A merge is just a commit with one exception: it has 2 parents.
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/merge4.png" />
 
-A merge is just a commit with one exception: it has 2 parents:
+*References between commits are used to track history. All the other references are used to track content.*
+
+Now we will see another type of merge:
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/merge5.png" />
 <img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/merge6.png" />
+
+In this case, it's not created a merge committ because master branch is ahead and so all conflicts are already been resolved. This behaviour is called *fast forward*.
