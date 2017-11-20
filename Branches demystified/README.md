@@ -14,8 +14,6 @@ Branches are stored in this folder:
 
 *A branch is just a reference to a commit.*
 
-When we make a new commit, the current branch points to that.
-
 <img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/Branch%20ob.png" />
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/pointer.png" />
@@ -28,8 +26,13 @@ To see the list of branches:
 ```
 git branch
 ```
-<img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/headd.png" />
-
 What is the current branch? HEAD, is a reference to a branch
 
+<img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/headd.png" />
+
 <img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/head.png" />
+
+When we make a new commit, the current branch points to that.
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/newcommit.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/newcommit2.png" />
