@@ -36,3 +36,12 @@ When we make a new commit, the current branch points to that.
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/newcommit.png" />
 <img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/newcommit2.png" />
+
+How switch between branches?
+
+```
+git checkout branchname
+```
+Checkout = move head and update working area
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/checkout.png" />
