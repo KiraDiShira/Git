@@ -1,11 +1,9 @@
-# Git
-
-## Table of content
+# Git is not what you think
 
 - [Git as a persistent map](#git-as-a-persistent-map)   
 - [Git as a stupid content tracker](#git-as-a-stupid-content-tracker)
 
-### Git as a persistent map
+## Git as a persistent map
 
 At his core git is a persistent map. Key: any sequence of bytes --> Values: SHA1 hash. For example: "Apple Pie" --> 23991897e13e47ed0adb91a0082c31c82fe0cbe5
 
@@ -52,7 +50,7 @@ For unzip the object, remove the header and print out (-p) the actual content:
 git cat-file 23991897e13e47ed0adb91a0082c31c82fe0cbe5 -p
 Apple Pie
 ```
-### Git as a stupid content tracker
+## Git as a stupid content tracker
 
 ```
 git status
