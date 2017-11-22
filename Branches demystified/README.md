@@ -2,10 +2,12 @@
 
 # Branches demystified
 
-- [Git as a persistent map](#git-as-a-persistent-map)   
-- [Git as a stupid content tracker](#git-as-a-stupid-content-tracker)
+- [Introduction to branches](#introduction-to-branches)   
+- [How merge works](#how-merge-works)
+- [Detached HEAD](#detached-head)
 
-## Git as a persistent map
+
+## Introduction to branches
 
 When first commit is made, git creates "master" branch.
 Branches are stored in this folder:
@@ -46,6 +48,8 @@ Checkout = move head and update working area
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/checkout.png" />
 
+## How merge works
+
 If there is a new commit on Lisa branch:
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/merge1.png" />
@@ -70,3 +74,23 @@ Now we will see another type of merge:
 <img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/merge6.png" />
 
 In this case, it's not created a merge committ because master branch is ahead and so all conflicts are already been resolved. This behaviour is called *fast forward*.
+
+## Detached HEAD
+
+It's possible that HEAD refers to a commit instead of a branch:
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/dethead1.png" />
+
+If I do other commits, HEAD behaves like a branch:
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/dethead2.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/dethead3.png" />
+
+Garbage collector will delete unreachable objects.
+If I don't want that this happen:
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Branches%20demystified/Images/gc.png" />
+
+
+
+
