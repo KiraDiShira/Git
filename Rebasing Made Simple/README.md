@@ -59,3 +59,10 @@ Now that this commit has a new SHA1, this other commit
  Git garbage-collects unreachable objects
  
  ## Rebase vs merge
+ 
+  <img src="https://github.com/KiraDiShira/Git/blob/master/Rebasing%20Made%20Simple/Images/rebase10.PNG" />
+  
+  Merge perseveres history exactly as it happened.
+  
+  Rebasing helps you refactor your project history so that it's always nice to look at. This neatness, however, comes at a cost. This nicely designed history is not real. It was forced by rebasing, which is a distractive operation. Rebasing creates new commits and leaves behind existing commits that might get garbage collected. So a rebase history looks cleaner, but it is a lie its own way.
+  
