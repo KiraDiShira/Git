@@ -3,8 +3,8 @@
 # Rebasing made simple
 
 - [Introduction to rebase](#introduction-to-rebase)   
-- [How merge works](#how-merge-works)
-- [Detached HEAD](#detached-head)
+- [Rebase under the hood](#rebase-under-the-hood)
+- [Rebase vs merge](#rebase-vs-merge)
 
 
 ## Introduction to rebase
@@ -44,4 +44,18 @@ Now that this commit has a new SHA1, this other commit
 <img src="rebase6.PNG" />
 
  also has to change because its own parent has changed, so it gets a new SHA1 as shown for all the commits in the branch. 
- So Git cannot just move the commits. The commits in the rebase branch must have  different 
+ So Git cannot just move the commits. The commits in the rebase branch must have different SHA1s, so there must be different objects in the database. In other words, new commits, and indeed that's what they are. Here is how rebasing really works. When you rebase, Git makes copies of the commits. It creates new commits with mostly the same data, actually exactly the same data except for their parents.
+ 
+<img src="rebase7.PNG" />
+
+ So these new commits look almost exactly like the original commits, but they are new objects with new SHA1s, so they are new files with new file names in the database directory. And finally, Git moves the rebase branch to the new commits leaving the old commits behind.
+ 
+ <img src="rebase8.PNG" />
+ 
+ What’s happen to?
+ 
+ <img src="rebase9.PNG" />
+ 
+ Git garbage-collects unreachable objects
+ 
+ ## Rebase vs merge
