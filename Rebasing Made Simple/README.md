@@ -5,7 +5,7 @@
 - [Introduction to rebase](#introduction-to-rebase)   
 - [Rebase under the hood](#rebase-under-the-hood)
 - [Rebase vs merge](#rebase-vs-merge)
-
+- [Tags](#tags)
 
 ## Introduction to rebase
 
@@ -66,3 +66,10 @@ Now that this commit has a new SHA1, this other commit
   
   Rebasing helps you refactor your project history so that it's always nice to look at. This neatness, however, comes at a cost. This nicely designed history is not real. It was forced by rebasing, which is a distractive operation. Rebasing creates new commits and leaves behind existing commits that might get garbage collected. So a rebase history looks cleaner, but it is a lie its own way.
   
+## Tags
+
+In Git there are two types of tags. In module one we talked about annotated tags. The other kind of tag doesn't have a specific name, so people sometimes call them non-annotated tags or lightweight tags.
+
+We could create an annotated tag. Maybe you still remember that we can do that with tag -a. This tag would contain a lot of useful information such as the date that the tag was created, who created it, a description, and so on. However, in some cases I could decide that there is no reason to have all that information. I might just want to mark this commit with a simple label for my own use. If that is the case, then lightweight tag is enough. I can create such a tag by skipping the -a option in the tag command. There, now we have a tag. There it is. I did not have to provide the message or anything. Now, let's peek inside the .git refs directory. There is heads directory here that we already know about, it contains the branches, and then there is a tags directory that contains the tags. There are two tags in there, the one we already had and the one we just created. They are two simple files that contain the SHA1 of an object in the database. See. A tag is a reference to an object, in this case a commit just like a branch. I could actually turn this tag into a branch just by moving it to the refs heads directory. This is a lightweight tag, so it contains the SHA1 of a commit. An annotated tag is similar, but it contains the SHA1 of a tag object in the database, and that object in turn is referencing a commit besides containing all the extra information like the tag description. If tags look just like branches, then what's the difference between a tag and the branch? Simply enough, while branches move, tags don't. If I create a new commit right now, then master will move to track it because it's the current branch, but the tag will just stick to the same object forever.
+
+ 
