@@ -3,6 +3,7 @@
 # Distributed Version Control
 
 - [Git clone](#git-clone)   
+- [Local and remote](#local-and-remote)   
 
 ## Git clone
 
@@ -14,9 +15,11 @@ Each Git repository, such as this one, can remember information about other copi
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv1.png" />
 
+## Local and remote
 
+If we ask it for branches, then it will just show the local branches. We only have master now. But if you list the branches with the --all switch, then you see all the references, including the ones on the remote, the remote branches and the current position of HEAD.
 
-
+<img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv2.png" />
 
 
 
