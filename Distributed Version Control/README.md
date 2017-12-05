@@ -4,6 +4,7 @@
 
 - [Git clone](#git-clone)   
 - [Local and remote](#local-and-remote)   
+- [Pushing](#pushing)   
 
 ## Git clone
 
@@ -21,7 +22,60 @@ If we ask it for branches, then it will just show the local branches. We only ha
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv2.png" />
 
+Git tracks a remote by just exactly like it tracks local branches, by writing those branches as references in the refs folder.
 
+<img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv3.png" />
+
+If you look inside this folder, you might find that some of the branches are missing. In this case, I can only see the remotes HEAD here and not the branches. That's because of a low-level optimization in Git. To avoid maintaining one small file for each branch, Git sometimes compacts some of them into a single file called packed-refs here. There is no simple command to unpack this file, so you will have to take my word for it that the branches that are not in the refs directory must be in this file. This can happen for both local and remote branches.
+Whenever you synchronize with a remote, Git updates remote branches. Let's see how that synchronization happens in practice.
+
+## Pushing
+
+Simplest case:
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv4.png" />
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv5.png" />
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv6.png" />
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv7.png" />
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv8.png" />
+
+Another case, when we have a conflict: two different histories that need to be reconcilied
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv9.png" />
+
+We have 2 options.
+1)	Force a push: not raccomanded!
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv10.png" />
+
+Green commit will be garbage collected.
+We're also creating a very confusing situation for all other people synchronizing to the same remote because now their local history will be conflicting with the history in origin. So, probably forcing a push is not a good idea.
+
+2)
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv11.png" />
+
+What we want to do in general is we want to fix the conflict on our own machine before we push. To do that, we need first to fetch the data from the remote. There is a command to do that called git fetch. We get the new objects from the remote, and we also update the current position of the remote branches, as usual.
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv12.png" />
+
+Now that we have the new commit and the related objects, we can merge our local changes with the remote history. So, we did a fetch. Now we do a merge. Of course during the merge we might have to fix merging conflicts and the like, but the important point here is that we are not rewriting history. Merges never do that. Instead, they just add the new objects.
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv13.png" />
+
+ So, once we do the merge, our history is the history from the remote plus some more stuff, and we can push that new stuff to the remote without rewriting the remote's history.
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv14.png" />
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv15.png" />
+
+This sequence of a git fetch followed by a git merge is so common that there is one single command that does both. It's called, you guessed it, git pull, a fetch followed by a merge.
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv16.png" />
 
 
 At his core git is a persistent map. Key: any sequence of bytes --> Values: SHA1 hash. For example: "Apple Pie" --> 23991897e13e47ed0adb91a0082c31c82fe0cbe5
