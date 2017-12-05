@@ -34,7 +34,9 @@ Whenever you synchronize with a remote, Git updates remote branches. Let's see h
 Simplest case:
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv4.png" />
+
 ______________________________________________________________________________________________________________
+
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv5.png" />
 
