@@ -2,10 +2,24 @@
 
 # Distributed Version Control
 
-- [Git as a persistent map](#git-as-a-persistent-map)   
-- [Git as a stupid content tracker](#git-as-a-stupid-content-tracker)
+- [Git clone](#git-clone)   
 
-## Git as a persistent map
+## Git clone
+
+The git clone command takes the address of Git repository. I got the entire *.git* directory as well and all the files it contains. After copying this stuff, Git checked out the master branch to rebuild these files in the working area.
+
+When we issued the git clone command, Git added a few lines to the configuration of our repository.
+
+Each Git repository, such as this one, can remember information about other copies of the same repository. Each other copy is called a remote. You can define as many remotes as you want, but when you clone a project Git immediately defines a default remote and calls it with a conventional name, origin.
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv1.png" />
+
+
+
+
+
+
+
 
 At his core git is a persistent map. Key: any sequence of bytes --> Values: SHA1 hash. For example: "Apple Pie" --> 23991897e13e47ed0adb91a0082c31c82fe0cbe5
 
