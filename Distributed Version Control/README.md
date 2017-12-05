@@ -5,6 +5,7 @@
 - [Git clone](#git-clone)   
 - [Local and remote](#local-and-remote)   
 - [Pushing](#pushing)   
+- [Rebase revisited](#rebase-revisited)
 
 ## Git clone
 
@@ -87,104 +88,41 @@ This sequence of a git fetch followed by a git merge is so common that there is 
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv16.png" />
 
+## Rebase revisited
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv17.png" />
+
+We're working on the lisa branch, and we decide to roll the changes from master into lisa. You know that we can do this with either a merge or a rebase, so let's try the rebase this time. Git copies over the lisa commit so that its parent is now the latest commit on master, and there we are. However, remember that this new yellow commit that we have here is not the same commit as the previous yellow commit. Instead, it's a copy, a different database object. I marked it with an explanation point to tell it apart from the original commit.
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv18.png" />
+
+The original commit will actually be garbage collected at some point.
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv19.png" />
+
+So, now we have a conflict again. We can't just push because we have different histories on our local repo and on origin. This particular conflict, however, doesn't seem like much. We can fix it easily, for example by doing a force push or a pull followed by a push.
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv20.png" />
+
+In any case, we can work around this, and then we have the same stuff on origin that we have on local. However, things break down when we introduce another user.
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv21.png" />
+
+_________________________________________________________________________________________________________________
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv22.png" />
+
+She added a commit there, so now Annie has a pretty nasty conflict to sort out the next time she synchronizes with origin. She needs to understand what happened first, and then to solve the conflicts even though she didn't cause the conflicts herself. There are good chances that even after solving the conflicts she will end up with a confusing history that includes both yellow commits even though they look exactly the same. So, this is the bottom line when it comes to rebasing. As a general rule, never rebase stuff that has been shared with some other repository. It's okay to rebase commits that you haven't shared yet in general, but remember that it's easy to rebase share commits by mistake and then expect some trouble.
+
+
+
+
+
+
+
 
 At his core git is a persistent map. Key: any sequence of bytes --> Values: SHA1 hash. For example: "Apple Pie" --> 23991897e13e47ed0adb91a0082c31c82fe0cbe5
 
 ```
  echo "Apple Pie" | git hash-object --stdin
 ```
-For persisting map I need a repository:
-
-```
-git init
-```
-And then write (-w) on it:
-
-```
- echo "Apple Pie" | git hash-object -w
-```
-
-If I search on hiddens file of my root directory:
-
-```
- ls -a
-```
-I will find an hidden *.git* folder:
-
-<img src="https://github.com/KiraDiShira/Git/blob/master/GitIsNotWhatYouThink/Images/githiddenfolder.png" />
-
-This directory is where maps are persisted. Actually I have persisted only one item: "Apple Pie" --> 23991897e13e47ed0adb91a0082c31c82fe0cbe5
-
-And in .git/objects directory there are other three directory.
-I will talk later about *info* and *pack* directory, but note that *23* are the first two digits of the value of my item, while the remaining digits are the 23 directory's content:
-
-<img src="https://github.com/KiraDiShira/Git/blob/master/GitIsNotWhatYouThink/Images/23new.PNG" />
-
-If I want to know the type (-t) of my persisted object:
-
-```
-git cat-file 23991897e13e47ed0adb91a0082c31c82fe0cbe5 -t
-blob
-```
-
-For unzip the object, remove the header and print out (-p) the actual content:
-
-```
-git cat-file 23991897e13e47ed0adb91a0082c31c82fe0cbe5 -p
-Apple Pie
-```
-## Git as a stupid content tracker
-
-```
-git status
-```
-
-To commit a file I need to put it in the staging area first
-
-```
-git add
-git commit -m "First commit"
-```
-To look the list of existing commit:
-
-```
-git log
-```
-<img src="https://github.com/KiraDiShira/Git/blob/master/GitIsNotWhatYouThink/Images/gitlog.png" />
-
-The commit is stored in the same way of a file, and If I print out his content:
-
-<img src="https://github.com/KiraDiShira/Git/blob/master/GitIsNotWhatYouThink/Images/commitobject.png" />
-
-I can see that is pointing to a tree object.
-
-<img src="https://github.com/KiraDiShira/Git/blob/master/GitIsNotWhatYouThink/Images/objmod1.png" />
-
-If I do a second commit:
-
-<img src="https://github.com/KiraDiShira/Git/blob/master/GitIsNotWhatYouThink/Images/secondcommit.PNG" />
-
-Only the first commit has no parent, and each commit has a different tree value:
-
-<img src="https://github.com/KiraDiShira/Git/blob/master/GitIsNotWhatYouThink/Images/secondcommittree.PNG" />
-
-<img src="https://github.com/KiraDiShira/Git/blob/master/GitIsNotWhatYouThink/Images/gom.png" />
-
-At this time there are 8 objects in the database:
-
-```
-git count-objects
-```
-If I change only 1 row in a 10000 rows files will be created a new object in my database? This will not happen, and this is the reason we exist the *info* and *pack* directories. We can't focus on this optimization layer to understand the git objects model.
-
-TAG is like a label for the current state of the project. There are 2 type of tags: regular and annotated. Now we will see annotated tag.
-
-<img src="https://github.com/KiraDiShira/Git/blob/master/GitIsNotWhatYouThink/Images/tag.png" />
-
-The git objects model is made up only of:
-- Blob
-- Commits
-- Trees
-- Annotated tags
-
-<img src="https://github.com/KiraDiShira/Git/blob/master/GitIsNotWhatYouThink/Images/gomfinal.png" />
