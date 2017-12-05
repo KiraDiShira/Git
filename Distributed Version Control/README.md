@@ -34,12 +34,18 @@ Whenever you synchronize with a remote, Git updates remote branches. Let's see h
 Simplest case:
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv4.png" />
-
+______________________________________________________________________________________________________________
 <img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv5.png" />
+
+______________________________________________________________________________________________________________
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv6.png" />
 
+______________________________________________________________________________________________________________
+
 <img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv7.png" />
+
+______________________________________________________________________________________________________________
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv8.png" />
 
@@ -70,6 +76,7 @@ Now that we have the new commit and the related objects, we can merge our local 
  So, once we do the merge, our history is the history from the remote plus some more stuff, and we can push that new stuff to the remote without rewriting the remote's history.
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv14.png" />
+______________________________________________________________________________________________________________
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv15.png" />
 
