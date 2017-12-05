@@ -6,6 +6,7 @@
 - [Local and remote](#local-and-remote)   
 - [Pushing](#pushing)   
 - [Rebase revisited](#rebase-revisited)
+- [Features of GitHub](#features-of-github)
 
 ## Git clone
 
@@ -114,15 +115,12 @@ ________________________________________________________________________________
 
 She added a commit there, so now Annie has a pretty nasty conflict to sort out the next time she synchronizes with origin. She needs to understand what happened first, and then to solve the conflicts even though she didn't cause the conflicts herself. There are good chances that even after solving the conflicts she will end up with a confusing history that includes both yellow commits even though they look exactly the same. So, this is the bottom line when it comes to rebasing. As a general rule, never rebase stuff that has been shared with some other repository. It's okay to rebase commits that you haven't shared yet in general, but remember that it's easy to rebase share commits by mistake and then expect some trouble.
 
+## Features of GitHub
 
+<img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv23.png" />
 
+A fork is kind of like clone, but it's a remote clone. We are cloning the project from someone else's GitHub account to our own GitHub account. So now we have a new project in the cloud, and we can clone that one on our local machine. When we do that, Git creates a remote in our local repo pointing at origin. Origin is pointing at our own GitHub project, not the original project, of course. Actually, from Git's point of view there is no connection at all between our project and the original project that we fork from. GitHub does know that the two projects are connected, but Git doesn't. So if we want to track changes to the original project, then we need to add another remote pointing at it. This is not something that Git does automatically. We have to do it ourselves. A common convention is to call this a remote upstream. Now we have our local project with multiple remotes. We can work on it, and we can synchronize all our local changes with origin. If we commit local changes, we can just push those changes to origin. If there are changes on upstream, we can pull them into our local project, solve any conflicts, and then push them to origin. One thing that we still cannot do, however, is to push changes to upstream. 
 
+<img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv24.png" />
 
-
-
-
-At his core git is a persistent map. Key: any sequence of bytes --> Values: SHA1 hash. For example: "Apple Pie" --> 23991897e13e47ed0adb91a0082c31c82fe0cbe5
-
-```
- echo "Apple Pie" | git hash-object --stdin
-```
+For example, we might like to contribute our orange commit to the original project, but we still do not have right access to upstream, so GitHub gives us an alternative. We can send a message to the maintainers of upstream and ask them to pull our changes. You know how it this is called. It's a pull request. Once again, pull requests are not a Git feature. They're not even a version control feature, strictly speaking. In a way, they are a social network feature. You're just sending a message to people. If those people like your changes, then GitHub makes it easy for them to do a remote pull and get your changes from origin. And that's all about forks and pull requests, two of the most important tools in modern open source development.
