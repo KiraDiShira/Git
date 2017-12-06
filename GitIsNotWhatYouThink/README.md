@@ -93,6 +93,8 @@ What stores a tree?
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/GitIsNotWhatYouThink/Images/gom.png" />
 
+A blob is not really a file. A blob is just a content of a file. The file name and the file permission are not stored in the blob, they are stored to the tree that points to the blob.
+
 At this time there are 8 objects in the database:
 
 ```
