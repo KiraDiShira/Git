@@ -12,7 +12,7 @@ At his core git is a persistent map. Key: any sequence of bytes --> Values: SHA1
 ```
  echo "Apple Pie" | git hash-object --stdin
 ```
-For persisting map I need a repository:
+For persisting map I need a repository (it's a data structure):
 
 ```
 git init
