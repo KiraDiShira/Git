@@ -89,6 +89,10 @@ Only the first commit has no parent, and each commit has a different tree value:
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/GitIsNotWhatYouThink/Images/gom.png" />
 
+What stores a tree?
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/GitIsNotWhatYouThink/Images/lezione1.PNG" />
+
 At this time there are 8 objects in the database:
 
 ```
