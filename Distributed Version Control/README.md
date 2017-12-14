@@ -31,6 +31,25 @@ Git tracks a remote by just exactly like it tracks local branches, by writing th
 If you look inside this folder, you might find that some of the branches are missing. In this case, I can only see the remotes HEAD here and not the branches. That's because of a low-level optimization in Git. To avoid maintaining one small file for each branch, Git sometimes compacts some of them into a single file called packed-refs here. There is no simple command to unpack this file, so you will have to take my word for it that the branches that are not in the refs directory must be in this file. This can happen for both local and remote branches.
 Whenever you synchronize with a remote, Git updates remote branches. Let's see how that synchronization happens in practice.
 
+## Remote tracking branch
+
+Remote-tracking branches are references to the state of remote branches. They’re local references that you can’t move; Git moves them for you whenever you do any network communication, to make sure they accurately represent the state of the remote repository. Think of them as bookmarks, to remind you where the branches in your remote repositories were the last time you connected to them.
+
+Remote-tracking branches take the form <remote>/<branch>. For instance, if you wanted to see what the master branch on your origin remote looked like as of the last time you communicated with it, you would check the origin/master branch. 
+
+<img src= "https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/RemoteTracking1.PNG" />
+
+___________________________________________________________________________________________________________
+
+<img src= "https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/RemoteTracking2.PNG" />
+
+To synchronize your work, you run a **git fetch origin** command. This command looks up which server “origin” is (in this case, it’s git.ourcompany.com), fetches any data from it that you don’t yet have, and updates your local database, moving your origin/master pointer to its new, more up-to-date position.
+
+<img src= "https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/RemoteTracking3.PNG" />
+
+*git fetch origin* fetch data only from origin, and **git fetch --all** fetch data from all remotes (origin is one of them)
+
+
 ## Pushing
 
 Simplest case:
