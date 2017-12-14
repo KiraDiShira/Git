@@ -4,6 +4,7 @@
 
 - [Git clone](#git-clone)   
 - [Local and remote](#local-and-remote)   
+- [Remote tracking branch](#remote-tracking-branch)
 - [Pushing](#pushing)   
 - [Rebase revisited](#rebase-revisited)
 - [Features of GitHub](#features-of-github)
