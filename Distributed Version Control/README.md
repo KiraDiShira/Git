@@ -109,6 +109,13 @@ This sequence of a git fetch followed by a git merge is so common that there is 
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv16.png" />
 
+`git pull origin master` is the same of
+
+```
+git fetch origin
+git merge origin/master
+```
+
 ## Rebase revisited
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/Distributed%20Version%20Control/Images/dv17.png" />
