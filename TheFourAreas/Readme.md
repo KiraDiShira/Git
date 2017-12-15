@@ -30,4 +30,6 @@ It's a binary file, so we cannot just open it in a text editor, for example. Thi
 
 that doesn't mean that the index is empty. It means that the index contains the same files and folders as the repository.
 
+We can double check that with the git diff command. Git diff gives you the differences between two areas. One thing that is a bit counterintuitive about diff is if I use diff without any argument, then it's going to compare the working area with the index. Right now, they contain exactly the same data, so the diff is empty. But usually, I don't use this diff style, not too often. The git status command is usually all I need to see the difference between what I have that is my working area and what I am going to commit, the index. Instead, most of the times I want to compare the stuff I want to commit with the stuff I already committed. That is, I want to compare the index with the repository. For that, you can use git diff with the --cached option. Right now, the index and the latest committing the repository are aligned, so this diff is also empty. Okay, we're all clean.
+
 <img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa5.png" />
