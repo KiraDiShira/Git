@@ -40,3 +40,19 @@ We can double check that with the git diff command. Git diff gives you the diffe
 <img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa5.png" />
 
 ## Basic workflow
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa6.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa7.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa8.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa9.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa10.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa11.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa12.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa13.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa14.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa15.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa16.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa17.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa18.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa19.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa20.png" />
