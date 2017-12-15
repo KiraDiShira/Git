@@ -4,6 +4,7 @@
 
 - [Introduction](#introduction)   
 - [Basic workflow](#basic-workflow)   
+- [Reset](#reset)
 
 ## Introduction
 
@@ -90,3 +91,41 @@ If I ask git status:
 Git already understood what's happening. It compared the content of the file in the working area and the index with content of the files in the repository and it noticed that the orange file and the yellow file have the same content, so they must be the same file with a different name. That's pretty smart and it works both for renaming and for moving.
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa20.png" />
+
+## Reset
+
+Reset is an operation that is all about moving a branch. You get a commit, say this commit here,
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa21.png" />
+
+and the reset moves the current branch to that commit.
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa22.png" />
+
+So that commit is now the current commit.
+
+Notice that reset doesn't move head. Head is still pointing to the same branch it was pointing at before, but the branch itself is moving, so head is following along for the ride. If you only look at the repository, then that's all that reset does. It moves a branch to point at the specific commit. The part that you might find confusing, however, is not what reset does to the repository, it's the second step, what a reset does to the other two main areas, the working area and the index, and the reset does different things there depending on its options. If you give it the **--hard** option, then reset copies data from the new current commit to both the working area and the index.
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa23.png" />
+
+With the **--mixed** option, reset copies data from the new current commit to the index, but leaves the working area alone. This is the default option, so if you don't give any option to reset, that will be a mixed reset.
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa24.png" />
+
+And finally, the **--soft** option means don't touch any of the areas. Just move the branch and skip step two entirely.
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa25.png" />
+
+The use case was I want to revert the whole project to the state it was in a previous commit. We did that with a hard reset, but that is not the only reason to use a reset.
+
+```
+git reset --hard fbe53536
+```
+I want to keep the changes in my working area, but I want to remove all changes from the index. In the index, I want the same version of the files that is in the repository. How do I do that? Earlier on, we've seen one way to do that using the **rm --cached** command. That works, but it's not the only way to do it. In fact, if you read Git's messages carefully, when I asked for the status, Git itself suggested a different command to our stage file. It suggested to using a reset.
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa26.png" />
+
+How exactly? Well the idea is to have what I call a head reset. This means that we're moving the current branch to the commit pointed at by head, but the current branch is already pointing at that commit by definition, so in this case, the reset does move the branch. If you wish, it moves it to the same place where it already is, so it doesn't move it. This is like skipping the first step in a reset altogether, the step where it moves the branch. What happens after that: Git moves data from the repository to the working area in the index. In this case, we didn't specify the kind of reset we want, so git will go with the default, and the default is a mixed reset.
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa27.png" />
+
