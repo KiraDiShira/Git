@@ -136,7 +136,7 @@ I create a new recipe (guacamole) and add it to the menu.
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa28.png" />
 
-Now imagine that while I'm working on this new recipe, I get interrupted for whatever reason. I need to do some work on another branch, for example. I want to focus on this other work, but I don't want my half-baked guacamole recipe to get in the way, so this is a good time to use the stash. I can store all my changes in the stash and they will stay there safely until I decide to get back to the guacamole recipe. I store the current status with “git stash save” or just “git stash”. I usually use the abbreviated form. And I also use this option, “git stash --include-untracked”. It means also stash files that are still untracked. It doesn't make a difference, in this case, we don't have any untracked files, but by default, git stash just ignores untracked files. I personally don't like the default much, so I use this option without even thinking about it usually. And here is what happens. Git takes all the data from the working area and the index that is not in the current commit in the repository and it copies all of that data to the stash.
+Now imagine that while I'm working on this new recipe, I get interrupted for whatever reason. I need to do some work on another branch, for example. I want to focus on this other work, but I don't want my half-baked guacamole recipe to get in the way, so this is a good time to use the stash. I can store all my changes in the stash and they will stay there safely until I decide to get back to the guacamole recipe. I store the current status with `git stash save` or just `git stash`. I usually use the abbreviated form. And I also use this option, `git stash --include-untracked`. It means also stash files that are still untracked. It doesn't make a difference, in this case, we don't have any untracked files, but by default, git stash just ignores untracked files. I personally don't like the default much, so I use this option without even thinking about it usually. And here is what happens. Git takes all the data from the working area and the index that is not in the current commit in the repository and it copies all of that data to the stash.
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa29.png" />
 
@@ -144,7 +144,7 @@ And then, it also checks out the current commit. So now we are aligned with the 
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa30.png" />
 
-I can read the content of the stash with “stash list” and there it is. 
+I can read the content of the stash with `stash list` and there it is. 
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa31.png" />
 
