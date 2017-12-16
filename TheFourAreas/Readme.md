@@ -132,13 +132,54 @@ How exactly? Well the idea is to have what I call a head reset. This means that 
 
 ## The stash
 
+I create a new recipe (guacamole) and add it to the menu.
+
 <img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa28.png" />
+
+Now imagine that while I'm working on this new recipe, I get interrupted for whatever reason. I need to do some work on another branch, for example. I want to focus on this other work, but I don't want my half-baked guacamole recipe to get in the way, so this is a good time to use the stash. I can store all my changes in the stash and they will stay there safely until I decide to get back to the guacamole recipe. I store the current status with “git stash save” or just “git stash”. I usually use the abbreviated form. And I also use this option, “git stash --include-untracked”. It means also stash files that are still untracked. It doesn't make a difference, in this case, we don't have any untracked files, but by default, git stash just ignores untracked files. I personally don't like the default much, so I use this option without even thinking about it usually. And here is what happens. Git takes all the data from the working area and the index that is not in the current commit in the repository and it copies all of that data to the stash.
+
 <img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa29.png" />
+
+And then, it also checks out the current commit. So now we are aligned with the current commit.
+
 <img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa30.png" />
+
+I can read the content of the stash with “stash list” and there it is. 
+
 <img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa31.png" />
+
+All my half-done work neatly packaged in a single stash, all of it. The stash is like a clipboard for your project. It's the place where you store stuff that you need to set aside for some time and it's a multiple clipboard that you can have as elements as you want. Each element gets labeled with information about the latest commit to make it easier to identify and it also gets a serial ID. Right now, we only have one element, so it's called the stash@{0}. The next one would be stash@{1}.
+Now that my stuff is stashed, I could switch to the other branch and do stuff in it, create new commits, whatever, anything. My half done work on guacamole stays in the stash. And after doing all this work, I can retrieve the stuff I stashed. You use “stash apply” to move data from the stash to the working area and the index and you can give it the name of a stash element. I will not give it a name, so it applies to the most recent element by default, which is stash@ 0. And there we are, all our data in the working area and the index is back where it was when I stashed it.
+
 <img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa32.png" />
+
+I don't need that data in the stash anymore. Let's clear the entire stash 
+
+```
+git stash clear
+```
+
+## Working with Paths
+
+You remember a commit is a like a snapshot of your entire project at some point in time. Sometimes you need to work with something smaller than your entire project. You need to work with a single file or a single directory.
+
 <img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa33.png" />
+
+Now let's say that I'm not sure about these changes anymore. Let's say that I like the change to the readme, but I'm not sure about the change to the menu just yet. So I want to unstage the menu file, but not the readme file.
+Normally, such a reset copies all the data from the current commit to the index, but in this case, we're saying that we only want to reset one file, the menu file, so only the menu file gets copied.
+
+```
+git reset HEAD menu.txt
+```
+
 <img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa34.png" />
+
+Now let's go one step further. It removed the menu changes from the working area as well.
+You might think that to do that we could reuse the same extraction, only this time make it a hard head reset. But no, that doesn't work. Git refuses to do a hard head reset with a path. That feels a bit inconsistent, but it's the way it is.
+
 <img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa35.png" />
+
+Instead, the most common way to revert a single file or directory in the working area without touching other files is to use checkout. Look at this weird checkout here. Normally checkout moves the head reference in the repository usually to a branch and then it copies all the files from the repository to the working area and the index. In this case, a word checkout is not going to move head. Checkout is just going to copy stuff from the current commit in the repository to the working area and the index and it's only going to do that for the one file we specified. So we just lost all the changes to that file.
+
 <img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa36.png" />
 
