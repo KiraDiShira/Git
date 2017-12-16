@@ -129,3 +129,15 @@ How exactly? Well the idea is to have what I call a head reset. This means that 
 
 <img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa27.png" />
 
+## The stash
+
+<img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa28.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa29.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa30.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa31.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa32.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa33.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa34.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa35.png" />
+<img src="https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Images/tfa36.png" />
+
