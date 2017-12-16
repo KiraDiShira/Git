@@ -5,7 +5,7 @@
 - [Introduction](#introduction)   
 - [Basic workflow](#basic-workflow)   
 - [Reset](#reset)
-- [The stash](the-stash)
+- [The stash](#the-stash)
 
 ## Introduction
 
