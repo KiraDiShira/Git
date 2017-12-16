@@ -6,6 +6,7 @@
 - [Basic workflow](#basic-workflow)   
 - [Reset](#reset)
 - [The stash](#the-stash)
+- [Working with paths](#working-with-paths)
 
 ## Introduction
 
