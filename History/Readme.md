@@ -1,8 +1,12 @@
 - [Index](https://github.com/KiraDiShira/Git#table-of-content)   
 
-# Branches demystified
+# History
 
 - [Exploring the past](#exploring-the-past)   
+- [Fixing the latest commit](#fixing-the-latest-commit)
+- [Interactive rebase](#interactive-rebase)
+- [The Reflog](#the-reflog)
+- [Reverting](#reverting)
 
 ## Exploring the past
 
