@@ -9,3 +9,4 @@
 - [The Four Areas](https://github.com/KiraDiShira/Git/blob/master/TheFourAreas/Readme.md#the-four-areas)
 - [History](https://github.com/KiraDiShira/Git/blob/master/History/Readme.md#history)
 - [Flight rules for git](https://github.com/k88hudson/git-flight-rules/blob/master/README.md#flight-rules-for-git)
+- [Workflow](https://github.com/KiraDiShira/Git/blob/master/Workflow/Readme.md#workflow)
