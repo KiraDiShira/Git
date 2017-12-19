@@ -26,13 +26,16 @@ This is a common situation when you have a bug fix
 
 **Branch creation**
 
+```
 git checkout master 
 git pull origin master
 git branch feature/LangTranslation
 git checkout feature/LangTranslation
+```
 
 **Sviluppo quotidiano**
 
+```
 git checkout master
 git fetch origin
 git checkout feature/LangTranslation
@@ -41,15 +44,20 @@ git rebase origin/master
 git add .
 git commit -m "message name"
 git push origin feature/LangTranslation
+```
 
 **Fine sviluppo**
 
+```
 git rebase -i origin/master
 In editor: tutti f e il primo r. Salva e chiudi.
 In editor: rinomina con messaggio di commit
 git push -f origin feature/summary_of_the_feature
+```
 
 **Rimozione del branch**
 
+```
 git branch -D feature/LangTranslation --> cancella branch locale
 git push origin :feature/LangTranslation --> cancella branch remote
+```
