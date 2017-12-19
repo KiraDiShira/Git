@@ -3,6 +3,7 @@
 # Workflow
 
 - [Sharing commit between branches](#sharing-commit-between-branches)   
+- [Small workflow](#small-workflow)
 
 ## Sharing commit between branches
 
