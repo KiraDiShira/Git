@@ -50,9 +50,15 @@ git push origin feature/LangTranslation
 **Fine sviluppo**
 
 ```
+git checkout master
+git fetch origin
+git checkout feature/LangTranslation
+git rebase origin/master
+
 git rebase -i origin/master
 In editor: tutti f e il primo r. Salva e chiudi.
 In editor: rinomina con messaggio di commit
+
 git push -f origin feature/summary_of_the_feature
 ```
 
