@@ -44,7 +44,7 @@ git rebase origin/master
 
 git add .
 git commit -m "message name"
-git push origin feature/LangTranslation
+git push -u origin feature/LangTranslation
 ```
 
 **Fine sviluppo**
