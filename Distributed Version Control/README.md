@@ -50,6 +50,11 @@ To synchronize your work, you run a **git fetch origin** command. This command l
 
 *git fetch origin* fetch data only from origin, and **git fetch --all** fetch data from all remotes (origin is one of them)
 
+```
+git push -u origin new-feature
+```
+
+This command pushes new-feature to the central repository (origin), and the -u flag adds it as a remote tracking branch. After setting up the tracking branch, git push can be invoked without any parameters to automatically push the new-feature branch to the central repository.
 
 ## Pushing
 
